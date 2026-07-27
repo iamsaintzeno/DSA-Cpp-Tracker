@@ -34,10 +34,27 @@ public:     // private , protected
         return salary ;
     }
 
+    // constructor
+    teacher(){
+        cout << "Constructor called" << endl ;
+    }
+
 };
+
+class account
+{
+private:
+    double balance ;
+    string password ;
+public:
+    string accountId ;
+    string username ;
+    
+};
+
                  
 int main() {
-    teacher t1 ;   
+    teacher t1 ;  // constructor call 
     t1.name = "Mrs. Jagdale" ; 
     t1.subject = "DMCS" ;
     t1.dept = "Computer Science" ;
