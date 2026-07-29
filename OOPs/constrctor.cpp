@@ -59,7 +59,7 @@ public :
     // deconstructor 
 
     ~student() {
-        cout << "Deconstructor called" << endl ;
+        cout << "Deconstructor called....!!!" << endl ;
         delete cgpaPtr ;
     }
 
