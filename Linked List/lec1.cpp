@@ -44,6 +44,7 @@ public :
         if (head == NULL)
         {
             head = tail = newNode ;
+            return ;
         }
         else{
             tail-> next = newNode ;
