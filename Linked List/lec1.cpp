@@ -59,7 +59,7 @@ public :
         Node* temp = head ;
         head = head-> next ;
 
-        delete tail ;
+        delete temp ;
 
         if(head == NULL){
             tail = NULL ;
