@@ -52,10 +52,26 @@ public :
     void pop_front(){
         Node* temp = head ;
         head = head->next ;
+        if(head == NULL) return ;
         if(head!=NULL) head->prev = NULL ;
 
         temp->next = NULL ;
         delete temp ;
+    }
+
+    void pop_back(){
+        if(head==NULL) return ;
+        if(head == tail){
+            delete head ;
+            head = tail = NULL ;
+        }
+
+        Node* temp = tail ;
+        tail = tail->prev ;
+        tail->next = NULL ;
+        temp->prev = NULL ;
+        delete temp ;
+
     }
 
     void print(){
@@ -75,7 +91,7 @@ int main() {
     dll.push_back(1);   
     dll.push_back(2);
     dll.push_back(3);
-    dll.pop_front();
+    dll.pop_back();
     dll.print() ;   
     return 0;
 }
