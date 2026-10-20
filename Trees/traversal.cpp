@@ -16,6 +16,17 @@ public :
     }
 };
 
+class Tree{
+    TreeNode* root ;
+public : 
+    int height(TreeNode* root) {
+    if (root == NULL) return 0;
+
+    return 1 + max(height(root->left),
+                   height(root->right));
+   }
+};
+
 // class Solution {
 // public:
 //     vector<int> inorderTraversal(TreeNode* root) {
@@ -231,3 +242,26 @@ public :
 //     }
 // };
 
+Tree t ;
+
+void level(TreeNode* root , int depth){
+    if(root==NULL) return ;
+
+    if(depth==1){
+        cout << root->val << " ";
+        return ;
+    }
+
+    level(root->left,depth-1);
+    level(root->right,depth-1);
+}
+
+void levelOrder(TreeNode* root){
+    int h = t.height(root);
+
+    for (int i = 1; i <= h; i++)
+    {
+        level(root,i);
+        cout << endl ;
+    }  
+}
