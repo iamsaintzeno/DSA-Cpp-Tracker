@@ -58,10 +58,3 @@ class Solution{
             
 		}
 };
-                 
-int main() {
-    Solution s ;
-    
-    vector<vector<int>> ans = s.treeTraversal()   
-    return 0;
-}
